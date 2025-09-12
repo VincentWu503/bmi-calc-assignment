@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hitung BMI Anda</h1>
+        <div class="jenis-kelamin">
+            <h3>Jenis Kelamin</h3>
+            <input type="radio" name="pilihan-gender" id="laki">
+            <label for="pilihan-gender">Laki-laki</label>
+            <input type="radio" name="pilihan-gender" id="cewek">
+            <label for="pilihan-gender">Perempuan</label>
+        </div>
+        <div class="sistem-unit">
+            <h3>Sistem Unit</h3>
+            <input type="radio" name="pilihan-satuan" id="metrik">
+            <label for="metrik">Metrik</label>
+            <input type="radio" name="pilihan-satuan" id="imperial">
+            <label for="imperial">Imperial</label>
+        </div>
+        <div class="input-boxes">
+            <form action="index.js" method="post" id="input">
+                <div class="berat">
+                    <span>Berat Badan</span>
+                    <div class="colon">:</div>
+                    <input type="number" id="berat-kg" class="metrik-input" placeholder="kg"
+                        onkeypress="isNumberKey(event)">
+                    <input type="number" id="berat-lbs" class="imperial-input" placeholder="lbs" style="display: none;"
+                        onkeypress="isNumberKey(event)">
+                </div>
+                <br>
+                <div class="tinggi">
+                    <span>Tinggi Badan</span>
+                    <div class="colon">:</div>
+                    <div class="metrik-input">
+                        <input type="number" id="tinggi-cm" placeholder="cm" inputmode="numeric">
+                    </div>
+                    <div class="imperial-input" style="display: none;">
+                        <div class="tinggi-imperial">
+                            <div class="sub-tinggi-imperial">
+                                <input type="number" id="tinggi-kaki" placeholder="kaki" inputmode="numeric"
+                                    onkeypress="isNumberKey(event)">
+
+                            </div>
+                            <div class="sub-tinggi-imperial">
+                                <input type="number" id="tinggi-inci" placeholder="inci" inputmode="numeric"
+                                    onkeypress="isNumberKey(event)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="submit" id="calculate">Hitung BMI</button>
+                    <button type="submit" id="reset-btn">Reset</button>
+                </div>
+                <br>
+            </form>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
