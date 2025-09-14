@@ -30,9 +30,9 @@
                 <div class="berat">
                     <span>Berat Badan</span>
                     <div class="colon">:</div>
-                    <input type="number" id="berat-kg" class="metrik-input" placeholder="kg"
+                    <input type="text" id="berat-kg" class="metrik-input" placeholder="kg"
                         onkeypress="isNumberKey(event)">
-                    <input type="number" id="berat-lbs" class="imperial-input" placeholder="lbs" style="display: none;"
+                    <input type="text" id="berat-lbs" class="imperial-input" placeholder="lbs" style="display: none;"
                         onkeypress="isNumberKey(event)">
                 </div>
                 <br>
@@ -40,18 +40,18 @@
                     <span>Tinggi Badan</span>
                     <div class="colon">:</div>
                     <div class="metrik-input">
-                        <input type="number" id="tinggi-cm" placeholder="cm" inputmode="numeric">
+                        <input class="metrik-input" type="text" id="tinggi-cm" placeholder="cm" inputmode="numeric">
                     </div>
                     <div class="imperial-input" style="display: none;">
-                        <div class="tinggi-imperial">
+                        <div class="tinggi-imperial-container">
                             <div class="sub-tinggi-imperial">
-                                <input type="number" id="tinggi-kaki" placeholder="kaki" inputmode="numeric"
-                                    onkeypress="isNumberKey(event)">
+                                <input class="imperial-input" type="text" id="tinggi-kaki" placeholder="kaki"
+                                    inputmode="numeric" onkeypress="isNumberKey(event)">
 
                             </div>
                             <div class="sub-tinggi-imperial">
-                                <input type="number" id="tinggi-inci" placeholder="inci" inputmode="numeric"
-                                    onkeypress="isNumberKey(event)">
+                                <input class="imperial-input" type="text" id="tinggi-inci" placeholder="inci"
+                                    inputmode="numeric" onkeypress="isNumberKey(event)">
                             </div>
                         </div>
                     </div>

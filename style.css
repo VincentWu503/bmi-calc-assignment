@@ -60,16 +60,16 @@ form {
 
 .berat, .tinggi{
     display: grid;
-    column-gap: 1fr;
+    /* column-gap: 1fr; */
     grid-template-columns: 0.7fr 0.3fr 0.5fr;
     align-items: center;
     font-size: 16px;
 }
 
-.tinggi-imperial{
+.tinggi-imperial-container{
     display: flex;
     flex-direction: row;
-    gap: 4px;
+    gap: 12px;
 }
 
 #tinggi-kaki, #tinggi-inci{
@@ -131,4 +131,16 @@ input[type="number"] {
     padding: 2px;
     border-radius: 12px;
     font-size: 20px;
+}
+
+#berat-kg, #berat-lbs{
+    width: 128px;
+}
+
+#tinggi-cm{
+    width: 128px;
+}
+
+#tinggi-kaki, #tinggi-inci{
+    width: 54px;
 }

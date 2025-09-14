@@ -4,6 +4,11 @@ const metricInputs = document.querySelectorAll('.metrik-input');
 const imperialInputs = document.querySelectorAll('.imperial-input');
 const submitButton = document.getElementById('calculate');
 const resetButton = document.getElementById('reset-btn');
+const lakiRadio = document.getElementById('laki');
+const cewekRadio = document.getElementById('cewek');
+
+metricRadio.checked = true;
+lakiRadio.checked = true;
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('input').reset();
@@ -28,9 +33,35 @@ resetButton.addEventListener('click', function(e){
     document.getElementById('input').reset();
 })
 
+function isValid(){
+    let valid = true;
+    if (metricRadio.checked){
+        metricInputs.forEach(input =>{
+            console.log(input.value);
+            if (input.value === ''){
+                valid = false;
+                return valid;
+            } 
+        });
+    } else{
+         imperialInputs.forEach(input =>{
+            console.log(input.value);
+            if (input.value === ''){
+                valid = false;
+                return valid;
+            } 
+        });
+    }
+    return valid;
+}
+
 var bmi = 0.00;
 submitButton.addEventListener('click', function(e){
     e.preventDefault();
+    if(!isValid()){
+        alert('Isi semua input box!');
+        return;
+    }
     
     var totalInches = 0;
     if(metricRadio.checked){
@@ -76,7 +107,6 @@ function isNumberKey(evt){
     if (charCode > 31 && (charCode < 48 || charCode > 57))
         evt.preventDefault();
 }
-
 
 function getHeadings(bmi){
     if (bmi < 18.5) return "Masih kurang nih...";
