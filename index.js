@@ -86,7 +86,7 @@ function getHeadings(bmi){
 
 function headingsStyle(bmi){
     const element = document.querySelector('.bmi-result #head3');
-    if (bmi < 29. && bmi > 18.5){
+    if (bmi < 24.9 && bmi > 18.5){
         element.style.backgroundColor = "45a049";
     }else{
         element.style.backgroundColor = "rgb(216, 13, 13)";
